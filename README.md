@@ -25,21 +25,6 @@ Use the instruction to control the robot.
 2. The hardware doesn't have velocity control, the command sends to the robot is open loop, works as voltage command.
 
 ## Parameters
-<param name="port" value="/dev/ttyACM0"/>
-<param name="baud_rate" value="9600"/>
-<param name="body_width" value="1.078"/>
-<param name="serial_time_out" value="50"/>
-<param name="cmd_time_out" value="0.1"/>
-<param name="control_rate" value="10"/>
-<param name="odom_rate" value="60"/>
-<param name="odom_window" value="20"/>
-<param name="wheel_multiplier" value="-0.0145"/>
-<param name="cmd_from_hardware" value="true"/>
-<param name="flip_lr" value="false"/>
-<param name="publish_tf" value="false"/>
-<param name="odom_bias" value="0.98"/>
-<remap from="odom" to="/arti/odom"/>
-
  Parameter                    |           Description                                       |              Value          
 ------------------------------|-------------------------------------------------------------|-------------------------    
 port                          | The port address of the hardware                            | string               
