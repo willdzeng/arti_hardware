@@ -16,7 +16,6 @@ ArtiHardware::ArtiHardware(ros::NodeHandle nh, ros::NodeHandle private_nh): nh_(
 	private_nh.param("wheel_multiplier", wheel_multiplier_, 0.5);
 	private_nh.param("maximum_vel", maximum_vel_, 1.0);
 	private_nh.param("odom_bias", odom_bias_, 1.0);
-	private_nh.param("maximum_vel", maximum_vel_, 1.0);
 	private_nh.param("ultra_dist_multipiler", ultra_dist_multipiler_, 1.0);
 	private_nh.param("temp_multipiler", temp_multipiler_, 1.0);
 	private_nh.param("temp_cutoff_value", temp_cutoff_value_, 65.0);
@@ -187,7 +186,6 @@ void ArtiHardware::sensorLoop()
 						parseDataStr(data_str, temp);
 						tempCheck(temp);
 						publishTemperature(temp);
-
 					}
 				}
 			}
@@ -259,6 +257,11 @@ void ArtiHardware::printVector(const T& v)
 	std::cout << std::endl;
 }
 
+/**
+ * @brief      Process odom data, filtering using window, and publish odometry
+ *
+ * @param[in]  odom  The odom
+ */
 void ArtiHardware::processOdom(const std::vector<int>& odom) {
 	if (odom.size() != 2) {
 		return;
