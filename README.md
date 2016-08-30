@@ -5,6 +5,7 @@ The Hardware ROS package for ARTI3 robot
 sudo apt-get install ros-$ROS_DISTRO-serial
 cd "your_workspace"/src
 git clone https://github.com/transcendrobotics/arti_hardware.git
+git clone https://github.com/transcendrobotics/arti_msgs.git
 cd ..
 catkin_make
 ```
