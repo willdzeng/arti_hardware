@@ -1,7 +1,7 @@
-/* Encoder Library - TwoKnobs Example
- * http://www.pjrc.com/teensy/td_libs_Encoder.html
+/* This is the hardware Arduino code for ARTI from Transcend Robotics
+ * transcend.ai
  *
- * This example code is in the public domain.
+ * 
  */
 #include <Arduino.h>
 // #define ENCODER_OPTIMIZE_INTERRUPTS
@@ -172,10 +172,5 @@ bool parseMotorCmd(String str, int& left, int& right) {
 	String rightstr = str.substring(id1 + 1, id2);
 	left = leftstr.toInt();
 	right = rightstr.toInt();
-	// Serial.println();
-	// Serial.println(left);
-	// Serial.println(right);
-	// left = 0;
-	// right = 0;
 	return 1;
 }
