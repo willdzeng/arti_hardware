@@ -4,13 +4,16 @@
  * 
  */
 #include <Arduino.h>
+
 // #define ENCODER_OPTIMIZE_INTERRUPTS
 #define ENCODER_DO_NOT_USE_INTERRUPTS
 #include <Rotary.h>
-
+// whether to use odometry
 bool use_odom = false;
+// whether to use ultrasound
 bool use_ultrasound = false;
-bool use_temp = true;
+// whether to use temperature
+bool use_temp = false;
 
 Rotary knobLeft, knobRight;
 
@@ -39,8 +42,6 @@ String data_str = "";
 
 long positionLeft  = 0;
 long positionRight = 0;
-
-
 
 bool parseMotorCmd(String str, int& left, int& right);
 void processOdom();
