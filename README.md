@@ -5,6 +5,7 @@ The Hardware ROS package for ARTI3 robot
 ```
 $ sudo adduser "your_user_name" dialout
 ```
+
 2. logout and log in.
 
 3. install the package
