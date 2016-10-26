@@ -1,6 +1,12 @@
 # arti_hardware  [Transcend Robotics](http://transcendrobotics.com/)
 The Hardware ROS package for ARTI3 robot
 ## How to install
+1. First add dialout to your user
+```
+$ sudo adduser "your_user_name" dialout
+```
+2. logou
+3. install the package
 ```
 sudo apt-get install ros-$ROS_DISTRO-serial ros-$ROS_DISTRO-realtime-tools
 cd "your_workspace"/src
