@@ -5,7 +5,8 @@ The Hardware ROS package for ARTI3 robot
 ```
 $ sudo adduser "your_user_name" dialout
 ```
-2. logou
+2. logout and log in.
+
 3. install the package
 ```
 sudo apt-get install ros-$ROS_DISTRO-serial ros-$ROS_DISTRO-realtime-tools
